@@ -1,0 +1,314 @@
+/* PERTEMUAN 2: Menambah What I Do dan About Me */
+
+/* ==================== GENERAL STYLES ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  color: #111;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Judul bagian */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Garis pendek di bawah judul */
+.short-line {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: black;
+  margin: 10px 0 20px 0;
+}
+
+.center-line {
+  margin: 10px auto 40px auto;
+}
+
+/* Tombol abu-abu persegi */
+.btn {
+  display: inline-block;
+  background: #d9d9d9;
+  padding: 12px 36px;
+  font-size: 15px;
+}
+
+.btn:hover {
+  background: #bbbbbb;
+}
+
+.btn-white {
+  background: white;
+}
+
+/* Wadah tombol */
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Label profesi */
+.label {
+  display: inline-block;
+  background: #333;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 8px;
+}
+
+/* Kotak abu-abu pengganti gambar */
+.placeholder {
+  background: #d9d9d9;
+  overflow: hidden;
+}
+
+/* Gambar di dalam kotak placeholder dan bingkai foto */
+.placeholder img,
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Foto dengan bingkai garis tipis */
+.photo-frame {
+  border: 1px solid black;
+  padding: 12px;
+  background: white;
+}
+
+/* ==================== NAVBAR STYLES ==================== */
+.navbar {
+  background: #d9d9d9;
+  padding: 10px 10%;
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 12px;
+}
+
+/* ==================== HOME SECTION STYLES ==================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 50px 10%;
+}
+
+.hero h1,
+.hero h2 {
+  font-size: 26px;
+}
+
+.hero-desc {
+  font-size: 12px;
+  margin: 20px 0;
+  max-width: 260px;
+}
+
+/* Ukuran foto profil di kanan */
+.hero-photo {
+  width: 320px;
+  height: 340px;
+  margin-left: auto;
+}
+
+/* ==================== WHAT I DO SECTION STYLES ==================== */
+.services {
+  padding: 50px 10%;
+}
+
+/* Susunan 3 kolom layanan */
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  text-align: center;
+}
+
+/* Ukuran ketiga foto layanan */
+.service-img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* Gambar memenuhi kotak dengan ukuran yang sama */
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Judul layanan */
+.service h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Deskripsi layanan */
+.service p {
+  font-size: 11px;
+  color: #555;
+}
+
+/* ==================== ABOUT ME SECTION STYLES ==================== */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 10%;
+}
+
+/* Ukuran foto About Me */
+.about-photo {
+  width: 320px;
+  height: 340px;
+}
+
+/* Judul ABOUT ME */
+.about-title {
+  font-size: 26px;
+}
+
+/* Paragraf perkenalan */
+.about-text p {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/* Daftar keahlian */
+.check-list {
+  list-style-type: "✔  ";
+  padding-left: 20px;
+}
+
+.check-list li {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+/* Bagian portofolio */
+.portfolio {
+  padding: 50px 10%;      /* padding = jarak dalam: atas-bawah 50px, kiri-kanan 10% */
+}
+
+/* Grid proyek: 2 kolom. Dengan 4 proyek otomatis menjadi 2 baris */
+.portfolio-grid {
+  display: grid;                    /* display: grid = tata letak kolom dan baris */
+  grid-template-columns: 1fr 1fr;   /* grid-template-columns = 2 kolom sama lebar */
+  gap: 30px;                        /* gap = jarak antar kolom dan antar baris */
+  text-align: center;               /* text-align = perataan teks. center = rata tengah */
+}
+
+/* Kotak gambar proyek: tinggi sama agar seragam */
+.project-img {
+  height: 220px;          /* height = tinggi kotak gambar */
+  margin-bottom: 12px;    /* margin-bottom = jarak luar sisi bawah, ke judul proyek */
+}
+
+/* Judul proyek di bawah gambar */
+.project h3 {
+  font-size: 18px;        /* font-size = ukuran huruf */
+}
+
+/* Wadah tombol VIEW MY PROJECTS */
+.center-button {
+  text-align: center;     /* text-align: center = isi (tombol) berada di tengah */
+  margin-top: 40px;       /* margin-top = jarak luar sisi atas, dari grid proyek */
+}
+/* ==================== SKILLS SECTION STYLES ==================== */
+/* Bagian skills. Kiri-kanan 0 agar panah bisa menempel di tepi layar */
+.skills {
+  padding: 30px 0 60px 0; /* padding = jarak dalam. Urutan: atas | kanan | bawah | kiri */
+}
+
+/* Susunan panah kiri | kartu | panah kanan berjajar ke samping */
+.skills-wrapper {
+  display: flex;          /* display: flex = panah dan kartu berjajar ke samping */
+  align-items: center;    /* align-items = posisi vertikal. center = panah sejajar di tengah kartu */
+  gap: 10px;              /* gap = jarak antar panah dan kartu */
+}
+
+/* Kumpulan 4 kartu skills */
+.skills-grid {
+  flex: 1;                /* flex: 1 = elemen ini mengambil semua sisa ruang yang tersedia */
+  display: grid;          /* display: grid = tata letak kolom dan baris */
+  grid-template-columns: 1fr 1fr 1fr 1fr;  /* grid-template-columns = 4 kolom sama lebar */
+  gap: 12px;              /* gap = jarak antar kartu */
+}
+
+/* Satu kartu skill */
+.skill-card {
+  background: white;      /* background = warna latar kartu */
+  border: 1px solid #ddd; /* border = garis tepi: tebal 1px, lurus (solid), abu-abu muda */
+  padding: 14px 10px;     /* padding = jarak dalam: atas-bawah 14px, kiri-kanan 10px */
+}
+
+/* Ikon sederhana di dalam kartu */
+.skill-icon {
+  display: block;         /* display: block = ikon berdiri di baris sendiri */
+  font-size: 22px;        /* font-size = ukuran simbol */
+  margin-bottom: 8px;     /* margin-bottom = jarak luar sisi bawah */
+}
+
+/* Judul kartu */
+.skill-card h3 {
+  font-size: 11px;        /* font-size = ukuran huruf */
+  margin-bottom: 8px;     /* margin-bottom = jarak luar sisi bawah */
+}
+
+/* Daftar teknologi di kartu */
+.skill-card p {
+  font-size: 9px;         /* font-size = ukuran huruf */
+  color: #555;            /* color = warna teks abu-abu gelap */
+}
+
+/* Tombol panah (hanya hiasan, tidak berfungsi) */
+.arrow {
+  background: #d9d9d9;    /* background = warna latar tombol */
+  width: 36px;            /* width = lebar tombol */
+  height: 42px;           /* height = tinggi tombol */
+  line-height: 38px;      /* line-height = tinggi satu baris teks. Dibuat hampir sama dengan tinggi kotak agar panah di tengah */
+  text-align: center;     /* text-align = perataan teks. center = rata tengah */
+  font-size: 30px;        /* font-size = ukuran simbol panah */
+  color: #555;            /* color = warna simbol */
+}
